@@ -1,0 +1,75 @@
+.tab {
+    margin-left: 0;
+    font-size: large;
+    padding: 1em;
+    border: 1px solid black;
+    border-bottom: 0px;
+    border-radius: 1em 1em 0 0;
+}
+
+.tab-active {
+    fill-opacity: 100%;
+}
+
+.tab-inactive {
+    border: 1px solid black;
+    text-decoration: underline;
+    cursor: pointer;
+    fill-opacity: 5%;
+}
+
+.tab-group {
+    display: flex;
+    justify-content: left;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.page-inactive {
+    display: none;
+}
+
+.page-active {
+    border: 1px solid black;
+}
+
+#tab_0 {
+    background-color: red;
+    color: ghostwhite;
+}
+
+#tab_1 {
+    background-color: blue;
+    color: white;
+}
+
+#tab_2 {
+    background-color: yellow;
+    color: black;
+}
+
+#tab_3 {
+    background-color: green;
+    color: white;
+}
+
+#page_0 {
+    background-color: red;
+    color: white;
+}
+
+#page_1 {
+    background-color: blue;
+    color: white;
+}
+
+#page_2 {
+    background-color: yellow;
+    color: black;
+}
+
+#page_3 {
+    background-color: green;
+    color: white;
+}
