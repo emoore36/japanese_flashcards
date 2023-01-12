@@ -3,23 +3,23 @@ import { Card, CardList } from "../cards/Cards";
 import './Pages.css'
 
 function Tab(props) {
-
     return (
-        <button className={props.isActive ? "tab tab-active" : "tab tab-inactive"} id={"tab_" + props.id} key={props.id} onClick={() => props.onClick(props.id)}>{props.text}</button>
+        <button
+            className={props.isActive ? "tab tab-active" : "tab tab-inactive"}
+            id={"tab_" + props.id} key={props.id}
+            onClick={() => props.onClick(props.id)}>
+            {props.text}
+        </button>
     );
 }
 
 function TabGroup(props) {
 
-    // TODO: active tab
+    let tabs = [];
 
-
-    const tabs = [
-        Tab({ ...props.list[0], onClick: props.onClick }),
-        Tab({ ...props.list[1], onClick: props.onClick }),
-        Tab({ ...props.list[2], onClick: props.onClick }),
-        Tab({ ...props.list[3], onClick: props.onClick })
-    ]
+    props.list.forEach((x, i, arr) => {
+        tabs.push(Tab({ ...arr[i], onClick: props.onClick }));
+    });
 
     return (
         <ul className="tab-group">{tabs}</ul>
@@ -27,8 +27,11 @@ function TabGroup(props) {
 
 }
 
-function getCards(card_list_id) {
-    const cardListRepo = [
+function PageControl() {
+
+    const [activeId, setActiveId] = useState(0);
+
+    const data = [
         CardList({
             data: [
                 Card({ id: 1, text: { back: "One", front: "一" } }),
@@ -87,32 +90,20 @@ function getCards(card_list_id) {
         })
     ];
 
-    return cardListRepo[card_list_id];
 
-}
+    const categories = ["Numbers", "Colors", "Verbs", "Adjectives"];
 
-function PageControl() {
+    let pages = [];
+    let propsList = [];
 
-    // TODO: state of active page
-    const [activeId, setActivePage] = useState(0);
-
-    const propsList = [
-        { id: 0, text: "Numbers", color: 'red', isActive: (0 === activeId) },
-        { id: 1, text: "Colors", color: 'blue', isActive: (1 === activeId) },
-        { id: 2, text: "Verbs", color: 'yellow', isActive: (2 === activeId) },
-        { id: 3, text: "Adjectives", color: 'green', isActive: (3 === activeId) }
-    ]
-
-    const pages = [
-        Page({ ...propsList[0], content: <CardList data={getCards(0)} />, isActive: (0 === activeId) }),
-        Page({ ...propsList[1], content: <CardList data={getCards(1)} />, isActive: (1 === activeId) }),
-        Page({ ...propsList[2], content: <CardList data={getCards(2)} />, isActive: (2 === activeId) }),
-        Page({ ...propsList[3], content: <CardList data={getCards(3)} />, isActive: (3 === activeId) })
-    ]
+    categories.forEach((x, i, arr) => {
+        propsList.push({ id: i, text: x, isActive: (i === activeId) });
+        pages.push(Page({ ...propsList[i], content: data[i] }));
+    })
 
     return (
         <div className="page-control" id="page_control_0">
-            {TabGroup({ list: propsList, onClick: setActivePage })}
+            {TabGroup({ list: propsList, onClick: setActiveId })}
             {pages}
         </div>
     );
@@ -121,10 +112,12 @@ function PageControl() {
 
 function Page(props) {
 
-    return (<div className={props.isActive ? "page page-active" : "page page-inactive"} key={props.id} id={"page_" + props.id}>
-        <h2>{props.text}</h2>
-        {props.content}
-    </div>);
+    return (
+        <div className={props.isActive ? "page page-active" : "page page-inactive"} key={props.id} id={"page_" + props.id}>
+            <h2>{props.text}</h2>
+            {props.content}
+        </div>
+    );
 
 }
 

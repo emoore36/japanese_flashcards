@@ -1,3 +1,13 @@
+:root {
+    --color_0: #11316B;
+    --color_1: #6B2749;
+    --color_2: #6B4F11;
+    --color_3: #166B17;
+
+    --font_color_0: white;
+    --font_color_1: black;
+}
+
 .tab {
     margin-left: 0;
     font-size: large;
@@ -5,6 +15,12 @@
     border: 1px solid black;
     border-bottom: 0px;
     border-radius: 1em 1em 0 0;
+}
+
+@media screen and (max-width: 406px) {
+    .tab {
+        width: 100%;
+    }
 }
 
 .tab-active {
@@ -20,10 +36,16 @@
 
 .tab-group {
     display: flex;
+    flex-wrap: wrap;
     justify-content: left;
     margin-bottom: 0;
     margin-left: 0;
     padding-left: 0;
+}
+
+.page {
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 
 .page-inactive {
@@ -35,41 +57,43 @@
 }
 
 #tab_0 {
-    background-color: red;
-    color: ghostwhite;
+    background-color: var(--color_0);
+    color: var(--font_color_0);
 }
 
 #tab_1 {
-    background-color: blue;
-    color: white;
+    background-color: var(--color_1);
+    color: var(--font_color_0);
 }
 
 #tab_2 {
-    background-color: yellow;
-    color: black;
+    background-color: var(--color_2);
+    color: var(--font_color_0);
 }
 
 #tab_3 {
-    background-color: green;
-    color: white;
+    background-color: var(--color_3);
+    color: var(--font_color_0);
 }
 
 #page_0 {
-    background-color: red;
-    color: white;
+    background-color: var(--color_0);
+    ;
+    color: var(--font_color_0);
 }
 
 #page_1 {
-    background-color: blue;
-    color: white;
+    background-color: var(--color_1);
+    color: var(--font_color_0);
 }
 
 #page_2 {
-    background-color: yellow;
-    color: black;
+    background-color: var(--color_2);
+    color: var(--font_color_0);
 }
 
 #page_3 {
-    background-color: green;
-    color: white;
+    background-color: var(--color_3);
+    ;
+    color: var(--font_color_0);
 }

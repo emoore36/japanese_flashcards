@@ -21,8 +21,14 @@ function Card(props) {
 
     const [flipped, flip] = useState(false);
 
-    return (<li id={'card_' + props.id} className="card" key={props.id} onClick={() => flip(!flipped)}>
-        <div className='card-content'>{(flipped ? props.text.back : props.text.front)}</div>
+    return (<li
+        id={'card_' + props.id}
+        className="card"
+        key={props.id}
+        onClick={() => flip(!flipped)}>
+        <div className='card-content'>
+            {(flipped ? props.text.back : props.text.front)}
+        </div>
     </li>);
 
 }
