@@ -8,7 +8,7 @@ import './Cards.css';
  */
 function CardList(props) {
 
-    return <ul className='card-list'>{props.data}</ul>;
+    return <ul className='card-list'>{props.cards}</ul>;
 
 }
 
