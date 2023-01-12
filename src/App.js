@@ -1,5 +1,4 @@
 import './App.css';
-// import { CardList } from './components/cards/Cards'
 import { PageControl } from './components/pages/Pages'
 
 function App() {
