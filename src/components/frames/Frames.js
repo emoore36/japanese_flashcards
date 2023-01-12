@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Card, CardList } from '../cards/Cards';
-import './Pages.css';
+import './Frames.css';
 import JSON_DATA from '../../static/card_lists.json';
 
 function Tab(props) {
@@ -29,7 +29,7 @@ function TabGroup(props) {
 
 }
 
-function PageControl() {
+function FrameControl() {
 
     const [activeId, setActiveId] = useState(0);
 
@@ -38,27 +38,27 @@ function PageControl() {
 
     const categories = ["Numbers", "Colors", "Verbs", "Adjectives"];
 
-    let pages = [];
+    let frames = [];
     let propsList = [];
 
     categories.forEach((category, category_index) => {
         propsList.push({ id: category_index, text: category, isActive: (category_index === activeId) });
-        pages.push(Page({ ...propsList[category_index], content: data[category_index] }));
+        frames.push(Frame({ ...propsList[category_index], content: data[category_index] }));
     })
 
     return (
-        <div className="page-control" id="page_control_0">
+        <div className="frame-control" id="frame_control_0">
             {TabGroup({ list: propsList, onClick: setActiveId })}
-            {pages}
+            {frames}
         </div>
     );
 
 }
 
-function Page(props) {
+function Frame(props) {
 
     return (
-        <div className={props.isActive ? "page page-active" : "page page-inactive"} key={props.id} id={"page_" + props.id}>
+        <div className={props.isActive ? "frame frame-active" : "frame frame-inactive"} key={props.id} id={"frame_" + props.id}>
             <h2>{props.text}</h2>
             {props.content}
         </div>
@@ -66,4 +66,4 @@ function Page(props) {
 
 }
 
-export { PageControl };
+export { FrameControl };

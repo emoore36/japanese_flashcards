@@ -1,10 +1,10 @@
 import './App.css';
-import { PageControl } from './components/pages/Pages'
+import { FrameControl } from './components/frames/Frames'
 
 function App() {
   return (
     <div className="App">
-      <PageControl />
+      <FrameControl />
     </div>
   );
 }

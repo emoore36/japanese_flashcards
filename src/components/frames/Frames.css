@@ -43,16 +43,16 @@
     padding-left: 0;
 }
 
-.page {
+.frame {
     padding-top: 1em;
     padding-bottom: 1em;
 }
 
-.page-inactive {
+.frame-inactive {
     display: none;
 }
 
-.page-active {
+.frame-active {
     border: 1px solid black;
 }
 
@@ -76,23 +76,23 @@
     color: var(--font_color_0);
 }
 
-#page_0 {
+#frame_0 {
     background-color: var(--color_0);
     ;
     color: var(--font_color_0);
 }
 
-#page_1 {
+#frame_1 {
     background-color: var(--color_1);
     color: var(--font_color_0);
 }
 
-#page_2 {
+#frame_2 {
     background-color: var(--color_2);
     color: var(--font_color_0);
 }
 
-#page_3 {
+#frame_3 {
     background-color: var(--color_3);
     ;
     color: var(--font_color_0);
