@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Card, CardList } from '../cards/Cards';
+import { Card, Deck } from '../cards/Cards';
 import './Frames.css';
 import JSON_DATA from '../../static/card_lists.json';
 
@@ -7,7 +7,8 @@ function Tab(props) {
     return (
         <button
             className={props.isActive ? "tab tab-active" : "tab tab-inactive"}
-            id={"tab_" + props.id} key={props.id}
+            id={"tab_" + props.id}
+            key={props.id}
             onClick={() => props.onClick(props.id)}>
             {props.text}
         </button>
@@ -34,16 +35,14 @@ function FrameControl() {
     const [activeId, setActiveId] = useState(0);
 
     // populate data
-    const data = JSON_DATA.data.map((cards_list) => CardList({ cards: cards_list.cards.map((card) => Card(card)) }));
-
-    const categories = ["Numbers", "Colors", "Verbs", "Adjectives"];
+    const data = JSON_DATA.data.map((cards_list) => Deck({ id: cards_list.id, category: cards_list.category, cards: cards_list.cards.map((card) => Card(card)) }));
 
     let frames = [];
     let propsList = [];
 
-    categories.forEach((category, category_index) => {
-        propsList.push({ id: category_index, text: category, isActive: (category_index === activeId) });
-        frames.push(Frame({ ...propsList[category_index], content: data[category_index] }));
+    data.forEach((deck, deck_index) => {
+        propsList.push({ id: deck_index, text: deck.props.category, isActive: (deck_index === activeId) });
+        frames.push(Frame({ ...propsList[deck_index], content: deck }));
     })
 
     return (
@@ -58,7 +57,9 @@ function FrameControl() {
 function Frame(props) {
 
     return (
-        <div className={props.isActive ? "frame frame-active" : "frame frame-inactive"} key={props.id} id={"frame_" + props.id}>
+        <div className={props.isActive ? "frame frame-active" : "frame frame-inactive"}
+            key={props.id}
+            id={"frame_" + props.id}>
             <h2>{props.text}</h2>
             {props.content}
         </div>

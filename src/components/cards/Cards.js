@@ -6,9 +6,9 @@ import './Cards.css';
  * @param {*} props the properties object
  * @returns a flexbox of cards.
  */
-function CardList(props) {
+function Deck(props) {
 
-    return <ul className='card-list'>{props.cards}</ul>;
+    return <ul id={props.id} category={props.category} className='deck'>{props.cards}</ul>;
 
 }
 
@@ -33,4 +33,4 @@ function Card(props) {
 
 }
 
-export { Card, CardList };
+export { Card, Deck };

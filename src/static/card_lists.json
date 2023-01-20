@@ -1,80 +1,154 @@
 {
     "data": [
         {
+            "id": 1,
+            "category": "Numbers",
             "cards": [
                 {
                     "id": 1,
                     "text": {
-                        "back": "One",
+                        "back": "1",
                         "front": "一"
                     }
                 },
                 {
                     "id": 2,
                     "text": {
-                        "back": "Two",
+                        "back": "2",
                         "front": "二"
                     }
                 },
                 {
                     "id": 3,
                     "text": {
-                        "back": "Three",
+                        "back": "3",
                         "front": "三"
                     }
                 },
                 {
                     "id": 4,
                     "text": {
-                        "back": "Four",
+                        "back": "4",
                         "front": "四"
                     }
                 },
                 {
                     "id": 5,
                     "text": {
-                        "back": "Five",
+                        "back": "5",
                         "front": "五"
                     }
                 },
                 {
                     "id": 6,
                     "text": {
-                        "back": "Six",
+                        "back": "6",
                         "front": "六"
                     }
                 },
                 {
                     "id": 7,
                     "text": {
-                        "back": "Seven",
+                        "back": "7",
                         "front": "七"
                     }
                 },
                 {
                     "id": 8,
                     "text": {
-                        "back": "Eight",
+                        "back": "8",
                         "front": "八"
                     }
                 },
                 {
                     "id": 9,
                     "text": {
-                        "back": "Nine",
+                        "back": "9",
                         "front": "九"
                     }
                 },
                 {
                     "id": 10,
                     "text": {
-                        "back": "Ten",
+                        "back": "10",
                         "front": "十"
+                    }
+                },
+                {
+                    "id": 11,
+                    "text": {
+                        "back": "11",
+                        "front": "十一"
+                    }
+                },
+                {
+                    "id": 12,
+                    "text": {
+                        "back": "12",
+                        "front": "十二"
+                    }
+                },
+                {
+                    "id": 13,
+                    "text": {
+                        "back": "13",
+                        "front": "十三"
+                    }
+                },
+                {
+                    "id": 14,
+                    "text": {
+                        "back": "14",
+                        "front": "十四"
+                    }
+                },
+                {
+                    "id": 15,
+                    "text": {
+                        "back": "15",
+                        "front": "十五"
+                    }
+                },
+                {
+                    "id": 16,
+                    "text": {
+                        "back": "16",
+                        "front": "十六"
+                    }
+                },
+                {
+                    "id": 17,
+                    "text": {
+                        "back": "17",
+                        "front": "十七"
+                    }
+                },
+                {
+                    "id": 18,
+                    "text": {
+                        "back": "18",
+                        "front": "十八"
+                    }
+                },
+                {
+                    "id": 19,
+                    "text": {
+                        "back": "19",
+                        "front": "十九"
+                    }
+                },
+                {
+                    "id": 20,
+                    "text": {
+                        "back": "20",
+                        "front": "二十"
                     }
                 }
             ]
         },
         {
+            "id": 2,
+            "category": "Colors",
             "cards": [
                 {
                     "id": 1,
@@ -149,6 +223,8 @@
             ]
         },
         {
+            "id": 3,
+            "category": "Verbs",
             "cards": [
                 {
                     "id": 1,
@@ -219,10 +295,33 @@
                         "back": "to walk",
                         "front": "歩く"
                     }
+                },
+                {
+                    "id": 11,
+                    "text": {
+                        "back": "to open",
+                        "front": "開ける"
+                    }
+                },
+                {
+                    "id": 12,
+                    "text": {
+                        "back": "to sit",
+                        "front": "座る"
+                    }
+                },
+                {
+                    "id": 13,
+                    "text": {
+                        "back": "to write",
+                        "front": "書く"
+                    }
                 }
             ]
         },
         {
+            "id": 4,
+            "category": "Adjectives",
             "cards": [
                 {
                     "id": 1,
