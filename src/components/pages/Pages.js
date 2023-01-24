@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FrameControl } from '../frames/Frames';
+import { Form } from '../forms/Forms';
 import './Pages.css';
 import logo from '../../static/svg/logo.svg';
 
@@ -37,15 +38,36 @@ function PageControl() {
 
     const [activeId, setActiveId] = useState(0);
 
+    /*
+
+    <form id="card-form" className="form" method="POST">
+            <input name="text-front" type='text' placeholder="Japanese Text"></input>
+            <input name="text-back" type='text' placeholder="English Text"></input>
+            <select id="deck-select" name="deck-name" type='text' placeholder="Deck">
+                <option name='' value='' disabled>Deck...</option>
+                <option name='Numbers' value='Numbers'>Numbers</option>
+                <option name='Colors' value='Colors'>Colors</option>
+                <option name='Verbs' value='Verbs'>Verbs</option>
+                <option name='Adjectives' value='Adjectives'>Adjectives</option>
+            </select>
+            <input type='submit' value='Go!' />
+        </form>,
+        <form id="deck-form" className="form" method="POST">
+            <input name="deck-category" type='text' placeholder="Category"></input>
+            <input type='submit' value='Go!' />
+        </form>,
+
+    */
+
     // populate data
     const data = [
         <FrameControl />,
-        <></>,
-        <></>,
-        <></>
+        <Form obj="card" method='post' ></Form>,
+        <Form obj="deck" method='post'></Form>,
+        <h3>Coming soon!</h3>
     ];
 
-    const features = ["Vocab Lists", "Create Card", "Create List", "Test Yourself"];
+    const features = ["Vocab Lists", "Create Card", "Create Deck", "Test Yourself"];
 
     let propsList = [];
     let pages = [];
