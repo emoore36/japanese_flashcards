@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import './Cards.css';
 
 /**
@@ -8,7 +7,7 @@ import './Cards.css';
  */
 function Deck(props) {
 
-    return <ul id={props.id} category={props.category} className='deck'>{props.cards}</ul>;
+    return <ul id={props.id} category={props.name} className='deck'>{props.cards}</ul>;
 
 }
 
@@ -19,15 +18,13 @@ function Deck(props) {
  */
 function Card(props) {
 
-    const [flipped, flip] = useState(false);
-
     return (<li
         id={'card_' + props.id}
         className="card"
         key={props.id}
-        onClick={() => flip(!flipped)}>
+        onClick={props.flipCard}>
         <div className='card-content'>
-            {(flipped ? props.text.back : props.text.front)}
+            {(props.flipped ? props.text.back : props.text.front)}
         </div>
     </li>);
 
