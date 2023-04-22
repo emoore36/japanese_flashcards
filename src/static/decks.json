@@ -1,0 +1,399 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "category": "Numbers",
+            "cards": [
+                {
+                    "id": 1,
+                    "text": {
+                        "back": "1",
+                        "front": "一"
+                    }
+                },
+                {
+                    "id": 2,
+                    "text": {
+                        "back": "2",
+                        "front": "二"
+                    }
+                },
+                {
+                    "id": 3,
+                    "text": {
+                        "back": "3",
+                        "front": "三"
+                    }
+                },
+                {
+                    "id": 4,
+                    "text": {
+                        "back": "4",
+                        "front": "四"
+                    }
+                },
+                {
+                    "id": 5,
+                    "text": {
+                        "back": "5",
+                        "front": "五"
+                    }
+                },
+                {
+                    "id": 6,
+                    "text": {
+                        "back": "6",
+                        "front": "六"
+                    }
+                },
+                {
+                    "id": 7,
+                    "text": {
+                        "back": "7",
+                        "front": "七"
+                    }
+                },
+                {
+                    "id": 8,
+                    "text": {
+                        "back": "8",
+                        "front": "八"
+                    }
+                },
+                {
+                    "id": 9,
+                    "text": {
+                        "back": "9",
+                        "front": "九"
+                    }
+                },
+                {
+                    "id": 10,
+                    "text": {
+                        "back": "10",
+                        "front": "十"
+                    }
+                },
+                {
+                    "id": 11,
+                    "text": {
+                        "back": "11",
+                        "front": "十一"
+                    }
+                },
+                {
+                    "id": 12,
+                    "text": {
+                        "back": "12",
+                        "front": "十二"
+                    }
+                },
+                {
+                    "id": 13,
+                    "text": {
+                        "back": "13",
+                        "front": "十三"
+                    }
+                },
+                {
+                    "id": 14,
+                    "text": {
+                        "back": "14",
+                        "front": "十四"
+                    }
+                },
+                {
+                    "id": 15,
+                    "text": {
+                        "back": "15",
+                        "front": "十五"
+                    }
+                },
+                {
+                    "id": 16,
+                    "text": {
+                        "back": "16",
+                        "front": "十六"
+                    }
+                },
+                {
+                    "id": 17,
+                    "text": {
+                        "back": "17",
+                        "front": "十七"
+                    }
+                },
+                {
+                    "id": 18,
+                    "text": {
+                        "back": "18",
+                        "front": "十八"
+                    }
+                },
+                {
+                    "id": 19,
+                    "text": {
+                        "back": "19",
+                        "front": "十九"
+                    }
+                },
+                {
+                    "id": 20,
+                    "text": {
+                        "back": "20",
+                        "front": "二十"
+                    }
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "category": "Colors",
+            "cards": [
+                {
+                    "id": 1,
+                    "text": {
+                        "back": "Red",
+                        "front": "赤"
+                    }
+                },
+                {
+                    "id": 2,
+                    "text": {
+                        "back": "Blue",
+                        "front": "青"
+                    }
+                },
+                {
+                    "id": 3,
+                    "text": {
+                        "back": "Green",
+                        "front": "緑"
+                    }
+                },
+                {
+                    "id": 4,
+                    "text": {
+                        "back": "Orange",
+                        "front": "オレンジ"
+                    }
+                },
+                {
+                    "id": 5,
+                    "text": {
+                        "back": "Purple",
+                        "front": "紫"
+                    }
+                },
+                {
+                    "id": 6,
+                    "text": {
+                        "back": "Yellow",
+                        "front": "黄色"
+                    }
+                },
+                {
+                    "id": 7,
+                    "text": {
+                        "back": "Black",
+                        "front": "黒"
+                    }
+                },
+                {
+                    "id": 8,
+                    "text": {
+                        "back": "White",
+                        "front": "白"
+                    }
+                },
+                {
+                    "id": 9,
+                    "text": {
+                        "back": "Brown",
+                        "front": "茶色"
+                    }
+                },
+                {
+                    "id": 10,
+                    "text": {
+                        "back": "Pink",
+                        "front": "ピンク"
+                    }
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "category": "Verbs",
+            "cards": [
+                {
+                    "id": 1,
+                    "text": {
+                        "back": "to eat",
+                        "front": "食べる"
+                    }
+                },
+                {
+                    "id": 2,
+                    "text": {
+                        "back": "to drink",
+                        "front": "飲む"
+                    }
+                },
+                {
+                    "id": 3,
+                    "text": {
+                        "back": "to sleep",
+                        "front": "寝る"
+                    }
+                },
+                {
+                    "id": 4,
+                    "text": {
+                        "back": "to get up",
+                        "front": "起きる"
+                    }
+                },
+                {
+                    "id": 5,
+                    "text": {
+                        "back": "to read",
+                        "front": "読む"
+                    }
+                },
+                {
+                    "id": 6,
+                    "text": {
+                        "back": "to wear",
+                        "front": "着る"
+                    }
+                },
+                {
+                    "id": 7,
+                    "text": {
+                        "back": "to laugh",
+                        "front": "笑う"
+                    }
+                },
+                {
+                    "id": 8,
+                    "text": {
+                        "back": "to dance",
+                        "front": "踊る"
+                    }
+                },
+                {
+                    "id": 9,
+                    "text": {
+                        "back": "to run",
+                        "front": "走る"
+                    }
+                },
+                {
+                    "id": 10,
+                    "text": {
+                        "back": "to walk",
+                        "front": "歩く"
+                    }
+                },
+                {
+                    "id": 11,
+                    "text": {
+                        "back": "to open",
+                        "front": "開ける"
+                    }
+                },
+                {
+                    "id": 12,
+                    "text": {
+                        "back": "to sit",
+                        "front": "座る"
+                    }
+                },
+                {
+                    "id": 13,
+                    "text": {
+                        "back": "to write",
+                        "front": "書く"
+                    }
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "category": "Adjectives",
+            "cards": [
+                {
+                    "id": 1,
+                    "text": {
+                        "back": "Big",
+                        "front": "大きい"
+                    }
+                },
+                {
+                    "id": 2,
+                    "text": {
+                        "back": "Small",
+                        "front": "小さい"
+                    }
+                },
+                {
+                    "id": 3,
+                    "text": {
+                        "back": "Slow",
+                        "front": "遅い"
+                    }
+                },
+                {
+                    "id": 4,
+                    "text": {
+                        "back": "Fast",
+                        "front": "速い"
+                    }
+                },
+                {
+                    "id": 5,
+                    "text": {
+                        "back": "Near",
+                        "front": "近く"
+                    }
+                },
+                {
+                    "id": 6,
+                    "text": {
+                        "back": "Far",
+                        "front": "遠い"
+                    }
+                },
+                {
+                    "id": 7,
+                    "text": {
+                        "back": "Good",
+                        "front": "良い"
+                    }
+                },
+                {
+                    "id": 8,
+                    "text": {
+                        "back": "Bad",
+                        "front": "悪い"
+                    }
+                },
+                {
+                    "id": 9,
+                    "text": {
+                        "back": "Many",
+                        "front": "多い"
+                    }
+                },
+                {
+                    "id": 10,
+                    "text": {
+                        "back": "Few",
+                        "front": "少し"
+                    }
+                }
+            ]
+        }
+    ]
+}
