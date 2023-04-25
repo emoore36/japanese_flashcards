@@ -49,7 +49,7 @@ function FrameControl() {
                 setFrames(frameData);
 
             } catch (err) {
-                console.error("Eric totally fucked up! Here's the error:", err);
+                console.error("Failed to retrieve data.", err);
             }
 
         };

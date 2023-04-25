@@ -38,27 +38,6 @@ function PageControl() {
 
     const [activeId, setActiveId] = useState(0);
 
-    /*
-
-    <form id="card-form" className="form" method="POST">
-            <input name="text-front" type='text' placeholder="Japanese Text"></input>
-            <input name="text-back" type='text' placeholder="English Text"></input>
-            <select id="deck-select" name="deck-name" type='text' placeholder="Deck">
-                <option name='' value='' disabled>Deck...</option>
-                <option name='Numbers' value='Numbers'>Numbers</option>
-                <option name='Colors' value='Colors'>Colors</option>
-                <option name='Verbs' value='Verbs'>Verbs</option>
-                <option name='Adjectives' value='Adjectives'>Adjectives</option>
-            </select>
-            <input type='submit' value='Go!' />
-        </form>,
-        <form id="deck-form" className="form" method="POST">
-            <input name="deck-category" type='text' placeholder="Category"></input>
-            <input type='submit' value='Go!' />
-        </form>,
-
-    */
-
     // populate data
     const data = [
         <FrameControl />,
