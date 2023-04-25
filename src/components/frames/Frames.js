@@ -2,6 +2,11 @@ import { useEffect, useState } from "react";
 import { Card, Deck } from '../cards/Cards';
 import './Frames.css';
 
+/**
+ * Display the toggleable 
+ * @param {*} props the React Component properties object
+ * @returns A labeled button whose click event sets the active frame.
+ */
 function Tab(props) {
     return (
         <button
@@ -15,6 +20,10 @@ function Tab(props) {
     );
 }
 
+/**
+ * Manages the state of active tabs and frames, and tracks which cards are "flipped".
+ * @returns the 
+ */
 function FrameControl() {
     const [data, setData] = useState([]);
     const [activeId, setActiveId] = useState(data.length ? data[0].id : 0);
@@ -28,25 +37,30 @@ function FrameControl() {
                 const dto = await response.json();
                 const jsonData = await dto['data'];
 
-                setData(jsonData);
+                if (jsonData) {
+                    setData(jsonData);
 
-                const frameData = jsonData.map((deck) => {
-                    const frameProps = {
-                        id: deck.id,
-                        text: deck.name,
-                        isActive: (deck.id === activeId),
-                        onClick: setActiveId
-                    };
-                    const cards = mapCardsToComponents(deck.cards, flipCard, cardsFlipped);
-                    const frameContent = Deck({ id: `frame_${deck.id}`, name: deck.name, cards });
-                    return { frameProps, frameContent };
-                });
 
-                if (activeId === 0) {
-                    setActiveId(jsonData[0].id);
+                    const frameData = jsonData.map((deck) => {
+                        const frameProps = {
+                            id: deck.id,
+                            text: deck.name,
+                            isActive: (deck.id === activeId),
+                            onClick: setActiveId
+                        };
+                        const cards = mapCardsToComponents(deck.cards, flipCard, cardsFlipped);
+                        const frameContent = Deck({ id: `frame_${deck.id}`, name: deck.name, cards });
+                        return { frameProps, frameContent };
+                    });
+
+                    if (activeId === 0) {
+                        setActiveId(jsonData[0].id);
+                    }
+
+                    setFrames(frameData);
+                } else {
+                    console.log("There is nothing to display.")
                 }
-
-                setFrames(frameData);
 
             } catch (err) {
                 console.error("Failed to retrieve data.", err);
@@ -93,6 +107,11 @@ function FrameControl() {
     );
 }
 
+/**
+ * 
+ * @param {*} props 
+ * @returns 
+ */
 function Frame(props) {
     return (
         <div
@@ -106,6 +125,13 @@ function Frame(props) {
     );
 }
 
+/**
+ * 
+ * @param {*} cards 
+ * @param {*} flipCard 
+ * @param {*} cardsFlipped 
+ * @returns 
+ */
 function mapCardsToComponents(cards, flipCard, cardsFlipped) {
     return cards.map((card) => {
         return Card({
